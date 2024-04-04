@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TargetScritp : MonoBehaviour
+public class TargetScript : MonoBehaviour
 {
     public void Hit()
     {
