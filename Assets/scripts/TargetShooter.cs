@@ -14,26 +14,32 @@ public class TargetShooter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!PauseMenu.PauseGame)
         {
-            Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            if (Physics.Raycast(ray, out RaycastHit hit, 100))
+            if (Input.GetMouseButtonDown(0))
             {
-                GameObject target = hit.collider.gameObject;
+                Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                if (Physics.Raycast(ray, out RaycastHit hit, 100))
+                {
+                    GameObject target = hit.collider.gameObject;
 
-                if (hit.collider.tag == "Target")
-                {
-                    target.GetComponent<TargetScript>().Hit();
-                    canvasManager.add_count();
+                    if (hit.collider.tag == "Target")
+                    {
+                        target.GetComponent<TargetScript>().Hit();
+                        canvasManager.add_count();
+                    }
+                    else
+                    {
+                        canvasManager.add_miss();
+                    }
                 }
-                else
-                {
-                    canvasManager.add_miss();
-                }
+                volume = SettingsManager.instance.Volume;
+                source.volume = (float)volume / 10;
+                source.Play();
+
+
             }
-            volume = SettingsManager.instance.Volume;
-            source.volume = (float) volume / 10;
-            source.Play();
+
 
         }
     }
