@@ -40,6 +40,11 @@ public class ADSceneLoader : MonoBehaviour
 
     public static void LoadScene(int SceneID)
     {
+        if (instance == null) {
+            LoadSceneWithoutAd(SceneID);
+            return;
+        }
+
         instance._waitLoadScene = SceneID;
 
         if (instance._lostBeforAD < instance.DelayAD)
