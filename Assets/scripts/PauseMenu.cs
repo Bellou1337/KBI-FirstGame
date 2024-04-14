@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
     static public bool PauseGame;
     public GameObject pauseGameMenu;
+    public GameObject bigheart;
+    public GameObject smallheart;
     private void Awake()
     {
        PauseGame = false;
@@ -30,6 +32,8 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseGameMenu.SetActive(false);
+        bigheart.SetActive(false);
+        smallheart.SetActive(false);
         Time.timeScale = 1f;
         //AudioListener.pause = false;
         PauseGame = false;
@@ -40,6 +44,8 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pauseGameMenu.SetActive(true);
+        bigheart.SetActive(true);
+        smallheart.SetActive(true);
         Time.timeScale = 0f;
         //AudioListener.pause = true;
         PauseGame = true;
@@ -52,6 +58,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         ADSceneLoader.LoadScene(0);
 
+    }
+    private void Hearts()
+    {
+        if (PauseGame == false)
+        {
+
+        }
     }
 
 /*    public void Settings()
