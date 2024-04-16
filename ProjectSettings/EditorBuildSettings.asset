@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ADScene.unity
     guid: b345990bdf421234a9b534c4c5f21c89
+  - enabled: 1
+    path: Assets/Scenes/LeaderBoard.unity
+    guid: 3eee978cceecb33458c1f4041302fbba
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

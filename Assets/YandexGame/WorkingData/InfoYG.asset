@@ -22,7 +22,7 @@ MonoBehaviour:
     name: Player this
     uniqueID: 000
     photo: https://justplaygames.ru/public/icon_player.png
-  AdWhenLoadingScene: 1
+  AdWhenLoadingScene: 0
   showFirstAd: 1
   rewardedAfterClosing: 0
   adDisplayCalls: 0
@@ -244,6 +244,35 @@ MonoBehaviour:
     it: []
     de: []
     hi: []
+  fontsTMP:
+    defaultFont: []
+    ru: []
+    en: []
+    tr: []
+    az: []
+    be: []
+    he: []
+    hy: []
+    ka: []
+    et: []
+    fr: []
+    kk: []
+    ky: []
+    lt: []
+    lv: []
+    ro: []
+    tg: []
+    tk: []
+    uk: []
+    uz: []
+    es: []
+    pt: []
+    ar: []
+    id: []
+    ja: []
+    it: []
+    de: []
+    hi: []
   fontsSizeCorrect:
     ru: 
     en: 
@@ -293,7 +322,7 @@ MonoBehaviour:
     consumed: 1
   metricaEnable: 0
   metricaCounterID: 0
-  debug: 0
+  debug: 1
   archivingBuild: 1
   logoImageFormat: 1
   backgroundImageFormat: 3

@@ -16,9 +16,9 @@ public class MenuMenedger : MonoBehaviour
         }
     }
 
-    private void leaders()
+    public void LoadScene(int id)
     {
-
+        ADSceneLoader.LoadSceneWithoutAd(id);
     }
     public void PlayGame(int i)
     {

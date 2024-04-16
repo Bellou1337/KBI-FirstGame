@@ -45,6 +45,7 @@ public class canvasManager : MonoBehaviour
             max_res_text.text = "Макс результат: " + max_res;
             
             SaveController.SaveData();
+            YandexGame.NewLeaderboardScores("MaxResult", max_res);
 
             timer = 60;
         }
