@@ -180,6 +180,30 @@ MonoBehaviour:
     thisPlayer:
       rank: 2
       score: 10
+  - technoName: MaxResult
+    entries: 'Test LeaderBoard
+
+      Name: time
+
+      1. anonymous: 10
+
+      2.
+      Max: 15
+
+      3. Maria: 23'
+    isDefault: 0
+    isInvertSortOrder: 0
+    decimalOffset: 0
+    type: numeric
+    players:
+    - rank: 1
+      name: Vasya
+      score: 120
+      photo: https://justplaygames.ru/public/icon_player.png
+      uniqueID: 789
+    thisPlayer:
+      rank: 2
+      score: 10
   LocalizationEnable: 1
   callingLanguageCheck: 1
   translateMethod: 0
@@ -322,7 +346,7 @@ MonoBehaviour:
     consumed: 1
   metricaEnable: 0
   metricaCounterID: 0
-  debug: 1
+  debug: 0
   archivingBuild: 1
   logoImageFormat: 1
   backgroundImageFormat: 3
