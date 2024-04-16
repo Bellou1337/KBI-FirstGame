@@ -19,9 +19,10 @@ public class canvasManager : MonoBehaviour
 
     void Start()
     {
-        count_text.text = "count: " + count.ToString();
-        miss_text.text = "miss: " + miss.ToString();
-        max_res_text.text = "max_res: 0";
+        count_text.text = "Попаданий: " + count.ToString();
+        miss_text.text = "Промахов: " + miss.ToString();
+        max_res_text.text = "Макс результат: 0";
+        timer_text.text = "Время: " + timer.ToString();
     }
     void Update()
     {
@@ -29,18 +30,18 @@ public class canvasManager : MonoBehaviour
         {
             timer -= Time.deltaTime;
             time_int = (int)timer;
-            timer_text.text = "time: " + time_int.ToString();
+            timer_text.text = "Время: " + time_int.ToString();
         }
         else
         {
-            max_res = Math.Max(count, max_res);
+            max_res = Math.Max(count - miss, max_res);
             count = 0;
-            count_text.text = "count: 0";
+            count_text.text = "Попаданий: 0";
 
             miss = 0;
-            miss_text.text = "miss: 0";
+            miss_text.text = "Промахов: 0";
 
-            max_res_text.text = "max_res: " + max_res;
+            max_res_text.text = "Макс результат: " + max_res;
 
             timer = 60;
         }
@@ -48,12 +49,12 @@ public class canvasManager : MonoBehaviour
     public void add_miss()
     {
         miss++;
-        miss_text.text = "miss: " + miss.ToString();
+        miss_text.text = "Промахов: " + miss.ToString();
     }
 
     public void add_count()
     {
         count++;
-        count_text.text = "count: " + count.ToString();
+        count_text.text = "Попаданий: " + count.ToString();
     }
 }

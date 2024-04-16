@@ -1,14 +1,7 @@
 fileFormatVersion: 2
-guid: 6f4caa9335e88984cad712cb69df7ebb
+guid: 90e251456d9bb7946a560c25316a47e8
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 235877
-  packageName: PluginYG - Yandex Game integration
-  packageVersion: 1.6.2
-  assetPath: Assets/WebGLTemplates/PluginYG/logo.png
-  uploadId: 655369

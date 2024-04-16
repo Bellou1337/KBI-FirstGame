@@ -9,13 +9,13 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseGameMenu;
     public GameObject bigheart;
     public GameObject smallheart;
+
     private void Awake()
     {
        PauseGame = false;
     }
     void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (PauseGame)
@@ -34,11 +34,11 @@ public class PauseMenu : MonoBehaviour
         pauseGameMenu.SetActive(false);
         bigheart.SetActive(false);
         smallheart.SetActive(false);
+
         Time.timeScale = 1f;
-        //AudioListener.pause = false;
         PauseGame = false;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void Pause()
@@ -46,8 +46,8 @@ public class PauseMenu : MonoBehaviour
         pauseGameMenu.SetActive(true);
         bigheart.SetActive(true);
         smallheart.SetActive(true);
+
         Time.timeScale = 0f;
-        //AudioListener.pause = true;
         PauseGame = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
@@ -59,16 +59,4 @@ public class PauseMenu : MonoBehaviour
         ADSceneLoader.LoadScene(0);
 
     }
-    private void Hearts()
-    {
-        if (PauseGame == false)
-        {
-
-        }
-    }
-
-/*    public void Settings()
-    {
-        SceneManager.LoadScene("Settings");
-    }*/
 }
