@@ -12,6 +12,9 @@ public class SettingsManager : MonoBehaviour
     {
         if (instance == null) { instance = this; }
         else Destroy(gameObject);
+
+        SaveController.LoadData();
+
         DontDestroyOnLoad(gameObject);
         InitializeSettingsManger();
     }

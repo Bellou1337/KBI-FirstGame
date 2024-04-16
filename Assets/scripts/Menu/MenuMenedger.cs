@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MenuMenedger : MonoBehaviour
 {
     public bool isOpenSettings = false;
-    public GameObject isButtonOfSettings;
     public GameObject[] SettingsObj;
 
     private void Awake()
@@ -29,7 +28,6 @@ public class MenuMenedger : MonoBehaviour
     public void UseSettings()
     {
         isOpenSettings = !isOpenSettings;
-        isButtonOfSettings.SetActive(false);
         foreach (GameObject obj in SettingsObj)
         {
             obj.SetActive(isOpenSettings);

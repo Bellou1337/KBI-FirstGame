@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.UIElements;
+using YG;
 
 public class canvasManager : MonoBehaviour
 {
@@ -15,13 +16,13 @@ public class canvasManager : MonoBehaviour
     public int miss = 0;
     public float timer = 60;
     int time_int;
-    int max_res = 0;
+    public static int max_res = 0;
 
     void Start()
     {
         count_text.text = "Попаданий: " + count.ToString();
         miss_text.text = "Промахов: " + miss.ToString();
-        max_res_text.text = "Макс результат: 0";
+        max_res_text.text = "Макс результат: " + max_res.ToString();
         timer_text.text = "Время: " + timer.ToString();
     }
     void Update()
@@ -42,6 +43,8 @@ public class canvasManager : MonoBehaviour
             miss_text.text = "Промахов: 0";
 
             max_res_text.text = "Макс результат: " + max_res;
+            
+            SaveController.SaveData();
 
             timer = 60;
         }

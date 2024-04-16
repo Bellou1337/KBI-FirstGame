@@ -31,6 +31,7 @@ public class ADSceneLoader : MonoBehaviour
 
     public static void LoadSceneWithoutAd(int SceneID)
     {
+        SaveController.SaveData();
         SceneManager.LoadScene(SceneID);
     }
     public static void LoadFinishScene()
